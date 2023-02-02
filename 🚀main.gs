@@ -1,4 +1,6 @@
 //エントリポイント
+//ゴミの日ルールを工事中のため動かないです。
+
 function main() {
 
   // const trashDate = {
