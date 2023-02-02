@@ -3,8 +3,7 @@ class MoyaserugomiPolicy {
   //コンストラクタで、条件となるルールを追加する
   constructor() {
     this.policy = new TrashDayPolicy();
-    this.policy.rules.push(new AreaARule());
-    this.policy.rules.push(new MondayRule());
+    this.policy.rules.push(new MoyaserugomiRule());
   }
 
   /** ルールを満たすばあいtrueを返すメソッド

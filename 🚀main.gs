@@ -1,17 +1,17 @@
 //エントリポイント
 function main() {
 
-  const trashDate = {
-    area: "A",
-    week: 1,
-    day: "月"
-  };　//燃えるゴミの日
-
   // const trashDate = {
   //   area: "A",
   //   week: 1,
-  //   day: "火"
-  // };　//資源ゴミカンの日
+  //   day: "月"
+  // };　//燃えるゴミの日
+
+  const trashDate = {
+    area: "A",
+    week: 1,
+    day: "火"
+  };　//資源ゴミカンの日
 
   //ゴミの日ポリシー配列
   const policies = [

@@ -3,9 +3,7 @@ class ShigenGomiCanPolicy {
   //コンストラクタで、条件となるルールを追加する
   constructor() {
     this.policy = new TrashDayPolicy();
-    this.policy.rules.push(new AreaARule());
-    this.policy.rules.push(new TuesdayRule());
-    this.policy.rules.push(new Week135Rule());
+    this.policy.rules.push(new ShigenGomiCanRule());
   }
 
   /** ルールを満たすばあいtrueを返すメソッド
