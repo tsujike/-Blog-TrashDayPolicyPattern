@@ -1,6 +1,4 @@
 //エントリポイント
-//ゴミの日ルールを工事中のため動かないです。
-
 function main() {
 
   // const trashDate = {
@@ -15,18 +13,8 @@ function main() {
     day: "火"
   };　//資源ゴミカンの日
 
-  //ゴミの日ポリシー配列
-  const policies = [
-    new MoyaserugomiPolicy(),
-    new ShigenGomiCanPolicy()
-  ];
-
-  for (const policy of policies) {
-    if (policy.complyWithAll(trashDate)) {
-     console.log(policy.getMessage());
-    }
-  }
-
+const t = new TrashDayRule(trashDate);
+console.log(t.isTrashDay());
 
 }
 
