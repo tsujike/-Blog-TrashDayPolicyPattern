@@ -10,6 +10,10 @@ class MoyaserugomiRule {
     return areaARule || areaBRule;
   }
 
+  getMessage(){
+    return "今日は燃えるゴミの日です";
+  }
+
 
 }
 

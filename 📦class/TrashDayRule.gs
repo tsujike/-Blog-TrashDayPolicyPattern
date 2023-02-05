@@ -10,55 +10,35 @@ class TrashDayRule {
 
     //ゴミの日ルールが増えたり、変更したりしたら、クラスを入れ替えるだけ
     this.rules.push(new MoyaserugomiRule());
-    // this.rules.push(new ShigenGomiCan());
+    this.rules.push(new ShigenGomiCanRule());
 
   }
 
-  /** 各ゴミの日ルールのOKメソッドのbooleanを判定する */
+  /** 各ゴミの日ルールのOKメソッドのbooleanを判定するメソッド */
   isTrashDay() {
 
     const rules = this.rules;
 
     for (const rule of rules) {
-      if (!rule.ok(this.trashDate)) return
-      return true
+      if (rule.ok(this.trashDate)) return true;
     }
 
   }
 
+  /** "今日は○○の日です"を返すメソッド */
+  getTrashDayMessage() {
 
+    const rules = this.rules;
 
-
-
-  // isTrashDay(){
-
-  // const area = this.getArea_();
-  // const week = this.getWeek_();
-  // const day = this.getDay_();
-
-  // const n = new JudgeTrashDate(area,week,day);
-  // return n.getMessage();
-
-  // }
-
-
-
-
-  //   getArea_() {
-  //     const area = this.trashDate.area;
-  //     return area
-  //   }
-
-  //   getWeek_() {
-  //     const area = this.trashDate.week;
-  //     return area
-  //   }
-
-  //   getDay_() {
-  //     const area = this.trashDate.day;
-  //     return area
-  //   }
-
+    for (const rule of rules) {
+      if (rule.ok(this.trashDate)) return rule.getMessage();
+    }
+  
+  }
 
 }
+
+
+
+
 

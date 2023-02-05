@@ -14,8 +14,9 @@ function main() {
   };　//資源ゴミカンの日
 
 const t = new TrashDayRule(trashDate);
-console.log(t.isTrashDay());
+console.log(t.isTrashDay()); //true
 
+console.log(t.getTrashDayMessage()); //true
 }
 
 
@@ -29,16 +30,15 @@ function test_main() {
       '#complyWithAll()': {
         'こうなるはず': function () {
 
-          const m = new MoyaserugomiPolicy();
 
           const trashDate = {
             area: "A",
-            areaNumber: "A1",
             week: 1,
             day: "月"
           };
 
-          assertThat(m.complyWithAll(trashDate)).is(true);
+          const t = new TrashDayRule(trashDate);
+          assertThat(t.isTrashDay()).is(true);
 
 
         }
